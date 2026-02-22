@@ -53,8 +53,7 @@ const Home = () => {
       entries => {
         const entry = entries[0]
 
-        if (!entry.isIntersecting) return
-        if (countriesToShow.length >= filteredCountries.length) return
+        if (!entry.isIntersecting || countriesToShow.length >= filteredCountries.length) return
 
         setPage(previousPage => previousPage + 1)
       },
